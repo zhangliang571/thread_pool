@@ -197,9 +197,9 @@ void func_cb(void *args)
 int main()
 {
 	threadPool *tp = new threadPool(3);
-	char *str1 = "hello111";
-	char *str2 = "hello222";
-	char *str3 = "hello333";
+	char str1[] = "hello111";
+	char str2[] = "hello222";
+	char str3[] = "hello333";
 	sleep(1);
 	tp->thread_add(func_cb, (void*)str1);
 	tp->thread_add(func_cb, (void*)str2);
